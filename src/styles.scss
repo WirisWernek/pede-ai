@@ -1,1 +1,30 @@
 /* You can add global styles to this file, and also import other style files */
+
+/* Importing Bootstrap SCSS file. */
+@import "./node_modules/bootstrap/scss/bootstrap";
+
+/* Importing Datepicker SCSS file. */
+@import "node_modules/ngx-bootstrap/datepicker/bs-datepicker";
+@import url("https://fonts.googleapis.com/css2?family=Lemon&display=swap");
+
+html,
+body {
+  font-family: "Lemon", serif;
+  height: 100%;
+  width: 100%;
+  color: aliceblue;
+  background-attachment: fixed;
+  background-image: url("/assets/images/fundo.svg");
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+}
+
+input[type="checkbox"] {
+  width: 1.4em;
+  height: 1.4em;
+  margin-right: 0.5rem;
+  vertical-align: middle;
+  float: none;
+  margin-top: 0;
+}

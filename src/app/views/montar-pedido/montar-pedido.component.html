@@ -1,0 +1,264 @@
+<h1 class="text-center fs-1">Açaí</h1>
+<div class="d-flex justify-content-center align-items-center">
+	<form class="w-25" action="">
+		<section class="mt-5">
+			<label for="tipo" class="mb-1 fs-4">Tipo</label>
+			<div id="tipo">
+				<div class="form-check">
+					<input class="form-check-input" type="radio" name="inputTipo" id="inputTipoNatural" value="Natural" [(ngModel)]="itensPedido.tipo">
+					<label class="form-check-label" for="inputTipoNatural">
+					Natural
+					</label>
+				</div>
+				
+				<div class="form-check">
+					<input class="form-check-input" type="radio" name="inputTipo" id="inputTipoZero" value="zero" [(ngModel)]="itensPedido.tipo">
+					<label class="form-check-label" for="inputTipoZero">
+						Zero Açúcar
+					</label>
+				</div>
+			</div>
+		</section>
+
+		<section class="mt-5">
+				<label for="tamanho" class="mb-1 fs-4 fs-4">Tamanho</label>
+				<div id="tamanho">
+					<div class="form-check">
+						<input class="form-check-input" type="radio" name="inputTamanho" id="tam300ml" value="300ml" [(ngModel)]="itensPedido.tamanho">
+						<label class="form-check-label" for="tam300ml">
+							300 ML
+						</label>
+					</div>
+					
+					<div class="form-check">
+						<input class="form-check-input" type="radio" name="inputTamanho" id="tam500ml" value="500ml" [(ngModel)]="itensPedido.tamanho" >
+						<label class="form-check-label" for="tam500ml">
+							500 ML
+						</label>
+					</div>
+					<div class="form-check">
+						<input class="form-check-input" type="radio" name="inputTamanho" id="tam710ml" value="710ml" [(ngModel)]="itensPedido.tamanho">
+						<label class="form-check-label" for="tam710ml">
+							710 ML
+						</label>
+					</div>
+					
+					<div class="form-check">
+						<input class="form-check-input" type="radio" name="inputTamanho" id="tam1l" value="1l" [(ngModel)]="itensPedido.tamanho" >
+						<label class="form-check-label" for="tam1l">
+							1L
+						</label>
+					</div>
+					<div class="form-check">
+						<input class="form-check-input" type="radio" name="inputTamanho" id="tamBarca" value="barca" [(ngModel)]="itensPedido.tamanho">
+						<label class="form-check-label" for="tamBarca">
+							Barca (700 ML)
+						</label>
+					</div>
+					
+					<div class="form-check">
+						<input class="form-check-input" type="radio" name="inputTamanho" id="tamRoleta" value="roleta" [(ngModel)]="itensPedido.tamanho" >
+						<label class="form-check-label" for="tamRoleta">
+							Roleta (1 Kg)
+						</label>
+					</div>
+				</div>
+		</section>
+
+		<section class="mt-5">
+				<label for="complementos" class="mb-1 fs-4">Complementos</label>
+				<div id="complementos">
+					<div class="form-check">
+						<input class="form-check-input" type="checkbox" id="complemento_leite_em_po" name="complemento_leite_em_po" [(ngModel)]="itensPedido.complemento_leite_em_po">
+						<label class="form-check-label" for="complemento_leite_em_po">
+						Leite em pó
+						</label>
+					</div>
+					<div class="form-check">
+						<input class="form-check-input" type="checkbox" id="complemento_granola" name="complemento_granola"  [(ngModel)]="itensPedido.complemento_granola">
+						<label class="form-check-label" for="complemento_granola">
+						Granola
+						</label>
+					</div>
+					<div class="form-check">
+						<input class="form-check-input" type="checkbox" id="complemento_amendoim" name="complemento_amendoim"  [(ngModel)]="itensPedido.complemento_amendoim">
+						<label class="form-check-label" for="complemento_amendoim">
+						Amendoim
+						</label>
+					</div>
+					<div class="form-check">
+						<input class="form-check-input" type="checkbox" id="complemento_flocos_de_arroz" name="complemento_flocos_de_arroz" [(ngModel)]="itensPedido.complemento_flocos_de_arroz">
+						<label class="form-check-label" for="complemento_flocos_de_arroz">
+						Flocos de Arroz
+						</label>
+					</div>
+					<div class="form-check">
+						<input class="form-check-input" type="checkbox" id="complemento_pacoca" name="complemento_pacoca"  [(ngModel)]="itensPedido.complemento_pacoca">
+						<label class="form-check-label" for="complemento_pacoca">
+						Paçoca
+						</label>
+					</div>
+					<div class="form-check">
+						<input class="form-check-input" type="checkbox" id="complemento_disqueti" name="complemento_disqueti"  [(ngModel)]="itensPedido.complemento_disqueti">
+						<label class="form-check-label" for="complemento_disqueti">
+						Disqueti
+						</label>
+					</div>
+					<div class="form-check">
+						<input class="form-check-input" type="checkbox" id="complemento_sucrilhos" name="complemento_sucrilhos" [(ngModel)]="itensPedido.complemento_sucrilhos">
+						<label class="form-check-label" for="complemento_sucrilhos">
+						Sucrilhos
+						</label>
+					</div>
+					<div class="form-check">
+						<input class="form-check-input" type="checkbox" id="complemento_granulado" name="complemento_granulado"  [(ngModel)]="itensPedido.complemento_granulado">
+						<label class="form-check-label" for="complemento_granulado">
+						Granulado
+						</label>
+					</div>
+					<div class="form-check">
+						<input class="form-check-input" type="checkbox" id="complemento_canudinhos" name="complemento_canudinhos"  [(ngModel)]="itensPedido.complemento_canudinhos">
+						<label class="form-check-label" for="complemento_canudinhos">
+						Canudinhos
+						</label>
+					</div>
+				</div>
+		</section>
+
+		<section class="mt-5">
+				<label for="coberturas" class="mb-1 fs-4">Coberturas</label>
+				<div id="coberturas">
+					<div class="form-check">
+						<input class="form-check-input" type="checkbox" id="cobertura_morango" name="cobertura_morango" [(ngModel)]="itensPedido.cobertura_morango">
+						<label class="form-check-label" for="cobertura_morango">
+						Calda de Morango
+						</label>
+					</div>
+					<div class="form-check">
+						<input class="form-check-input" type="checkbox" id="flexCheckChecked" name="flexCheckChecked"  [(ngModel)]="itensPedido.cobertura_kiwi">
+						<label class="form-check-label" for="flexCheckChecked">
+						Calda de Kiwi
+						</label>
+					</div>
+					<div class="form-check">
+						<input class="form-check-input" type="checkbox" id="cobertura_kiwi" name="cobertura_kiwi"  [(ngModel)]="itensPedido.cobertura_limao">
+						<label class="form-check-label" for="cobertura_kiwi">
+						Calda de Limão
+						</label>
+					</div>
+					<div class="form-check">
+						<input class="form-check-input" type="checkbox" id="cobertura_chocolate" name="cobertura_chocolate" [(ngModel)]="itensPedido.cobertura_chocolate">
+						<label class="form-check-label" for="cobertura_chocolate">
+						Calda de Chocolate
+						</label>
+					</div>
+					<div class="form-check">
+						<input class="form-check-input" type="checkbox" id="cobertura_menta" name="cobertura_menta"  [(ngModel)]="itensPedido.cobertura_menta">
+						<label class="form-check-label" for="cobertura_menta">
+						Calda de Menta
+						</label>
+					</div>
+					<div class="form-check">
+						<input class="form-check-input" type="checkbox" id="cobertura_mel" name="cobertura_mel"  [(ngModel)]="itensPedido.cobertura_mel">
+						<label class="form-check-label" for="cobertura_mel">
+						Mel
+						</label>
+					</div>
+					<div class="form-check">
+						<input class="form-check-input" type="checkbox" id="cobertura_leite_condensado" name="cobertura_leite_condensado" [(ngModel)]="itensPedido.cobertura_leite_condensado">
+						<label class="form-check-label" for="cobertura_leite_condensado">
+						Leite Condensado
+						</label>
+					</div>
+				</div>
+		</section>
+
+		<section class="mt-5">
+				<label for="frutas" class="mb-1 fs-4">Frutas</label>
+				<div id="frutas">
+					<div class="form-check">
+						<input class="form-check-input" type="checkbox" id="fruta_morango" name="fruta_morango" [(ngModel)]="itensPedido.fruta_morango">
+						<label class="form-check-label" for="fruta_morango">
+						Morango
+						</label>
+					</div>
+					<div class="form-check">
+						<input class="form-check-input" type="checkbox" id="fruta_banana" name="fruta_banana"  [(ngModel)]="itensPedido.fruta_banana">
+						<label class="form-check-label" for="fruta_banana">
+						Banana
+						</label>
+					</div>
+					<div class="form-check">
+						<input class="form-check-input" type="checkbox" id="fruta_uva" name="fruta_uva"  [(ngModel)]="itensPedido.fruta_uva">
+						<label class="form-check-label" for="fruta_uva">
+						Uva
+						</label>
+					</div>
+					<div class="form-check">
+						<input class="form-check-input" type="checkbox" id="fruta_abacaxi" name="fruta_abacaxi" [(ngModel)]="itensPedido.fruta_abacaxi">
+						<label class="form-check-label" for="fruta_abacaxi">
+						Abacaxi
+						</label>
+					</div>
+				</div>
+		</section>
+
+		<section class="mt-5">
+				<label for="adicionais" class="mb-1 fs-4">Adicionais</label>
+				<div id="adicionais">
+					<div class="form-check">
+						<input class="form-check-input" type="checkbox" id="adicional_tortuguita" name="adicional_tortuguita" [(ngModel)]="itensPedido.adicional_tortuguita">
+						<label class="form-check-label" for="adicional_tortuguita">
+						Tortuguita
+						</label>
+					</div>
+					<div class="form-check">
+						<input class="form-check-input" type="checkbox" id="adicional_nutella" name="adicional_nutella"  [(ngModel)]="itensPedido.adicional_nutella">
+						<label class="form-check-label" for="adicional_nutella">
+						Nutella
+						</label>
+					</div>
+					<div class="form-check">
+						<input class="form-check-input" type="checkbox" id="adicional_creme_de_leite_ninho" name="adicional_creme_de_leite_ninho"  [(ngModel)]="itensPedido.adicional_creme_de_leite_ninho">
+						<label class="form-check-label" for="adicional_creme_de_leite_ninho">
+						Creme de Leite Ninho
+						</label>
+					</div>
+					<div class="form-check">
+						<input class="form-check-input" type="checkbox" id="adicional_balas_fini" name="adicional_balas_fini" [(ngModel)]="itensPedido.adicional_balas_fini">
+						<label class="form-check-label" for="adicional_balas_fini">
+						Balas Fini
+						</label>
+					</div>
+					<div class="form-check">
+						<input class="form-check-input" type="checkbox" id="adicional_kit_kat" name="adicional_kit_kat"  [(ngModel)]="itensPedido.adicional_kit_kat">
+						<label class="form-check-label" for="adicional_kit_kat">
+						Kit Kat
+						</label>
+					</div>
+					<div class="form-check">
+						<input class="form-check-input" type="checkbox" id="adicional_gotas_de_chocolate" name="adicional_gotas_de_chocolate"  [(ngModel)]="itensPedido.adicional_gotas_de_chocolate">
+						<label class="form-check-label" for="adicional_gotas_de_chocolate">
+						Gotas de Chocolate
+						</label>
+					</div>
+					<div class="form-check">
+						<input class="form-check-input" type="checkbox" id="adicional_chocoball_power" name="adicional_chocoball_power" [(ngModel)]="itensPedido.adicional_chocoball_power">
+						<label class="form-check-label" for="adicional_chocoball_power">
+						Chocoball Power
+						</label>
+					</div>
+					<div class="form-check">
+						<input class="form-check-input" type="checkbox" id="adicional_ovomaltine" name="adicional_ovomaltine"  [(ngModel)]="itensPedido.adicional_ovomaltine">
+						<label class="form-check-label" for="adicional_ovomaltine">
+						Ovomaltine
+						</label>
+					</div>
+				</div>
+		</section>
+		<section class="my-5 d-flex justify-content-center align-items-center">
+			<button type="button" class="btn btn-success" (click)="pedir()">Pedir</button>
+		</section>
+	</form>
+
+</div>

@@ -25,3 +25,5 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+Imagem de <a href="https://br.freepik.com/vetores-gratis/fundo-de-folhas-tropicais-desenhadas-a-mao_13722339.htm#query=fundo%20acai&position=6&from_view=keyword&track=ais&uuid=90e4a1ba-835b-4dfb-9d31-ff647a33c07e">Freepik</a>
