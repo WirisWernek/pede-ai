@@ -4,8 +4,18 @@ import { MontarPedidoComponent } from './views/montar-pedido/montar-pedido.compo
 
 const routes: Routes = [
   {
-    path: '',
+    path: 'acai',
     component: MontarPedidoComponent,
+  },
+  {
+    path: '',
+    pathMatch: 'full',
+    redirectTo: 'acai',
+  },
+  {
+    path: '**',
+    pathMatch: 'full',
+    redirectTo: 'acai',
   },
 ];
 

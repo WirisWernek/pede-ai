@@ -1,11 +1,11 @@
 <h1 class="text-center fs-1">Açaí</h1>
 <div class="d-flex justify-content-center align-items-center">
-	<form class="w-25" action="">
+	<form action="">
 		<section class="mt-5">
 			<label for="tipo" class="mb-1 fs-4">Tipo</label>
 			<div id="tipo">
 				<div class="form-check">
-					<input class="form-check-input" type="radio" name="inputTipo" id="inputTipoNatural" value="Natural" [(ngModel)]="itensPedido.tipo">
+					<input class="form-check-input" type="radio" name="inputTipo" id="inputTipoNatural" value="natural" [(ngModel)]="itensPedido.tipo">
 					<label class="form-check-label" for="inputTipoNatural">
 					Natural
 					</label>
@@ -258,6 +258,9 @@
 		</section>
 		<section class="my-5 d-flex justify-content-center align-items-center">
 			<button type="button" class="btn btn-success" (click)="pedir()">Pedir</button>
+			<button type="button" class="btn btn-success" (click)="openModalInfo()">Info Modal</button>
+			<button type="button" class="btn btn-success" (click)="openModalError()">Error Modal</button>
+			<button type="button" class="btn btn-success" (click)="openModalSuccess()">Success Modal</button>
 		</section>
 	</form>
 
