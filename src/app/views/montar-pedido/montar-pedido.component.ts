@@ -21,14 +21,6 @@ export class MontarPedidoComponent {
 		private whatsappService: WhatsappService
 	) {}
 
-	openModalInfo() {
-		this.alertService.showInfo(['Cuidado no primeiro', 'Cuidado no segundo']);
-	}
-	
-	openModalSuccess() {
-		this.alertService.showSuccess(['deu bom 1', 'deu bom 2']);
-	}
-
 	pedir() {
 		if(this.montarDadosPedido()){
 			const link = this.whatsappService.carregarLinkWhatsApp(this.textoPedido);
