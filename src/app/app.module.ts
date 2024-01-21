@@ -11,6 +11,10 @@ import { ModalModule } from 'ngx-bootstrap/modal';
 import { ErrorModalComponent } from './components/modals/error-modal/error-modal.component';
 import { InfoModalComponent } from './components/modals/info-modal/info-modal.component';
 import { SuccessModalComponent } from './components/modals/success-modal/success-modal.component';
+import { AlertService } from './services/alert.service';
+import { PedidoService } from './services/pedido.service';
+import { ValidatePedidoService } from './services/validate-pedido.service';
+import { WhatsappService } from './services/whatsapp.service';
 import { MontarPedidoComponent } from './views/montar-pedido/montar-pedido.component';
 
 @NgModule({
@@ -24,7 +28,12 @@ import { MontarPedidoComponent } from './views/montar-pedido/montar-pedido.compo
     BrowserAnimationsModule,
     ModalModule.forRoot(),
   ],
-  providers: [],
+  providers: [
+	AlertService,
+	PedidoService,
+	ValidatePedidoService,
+	WhatsappService
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

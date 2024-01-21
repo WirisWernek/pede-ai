@@ -7,8 +7,11 @@ import { BsModalRef } from 'ngx-bootstrap/modal';
   styleUrls: ['./error-modal.component.scss']
 })
 export class ErrorModalComponent {
+	erros!: string[];
+
 	constructor(public modalRef: BsModalRef){}
-	cancelar() {
+	
+	voltar() {
 		this.modalRef.hide();
 	}
 }

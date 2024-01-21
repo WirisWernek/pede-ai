@@ -7,8 +7,9 @@ import { BsModalRef } from 'ngx-bootstrap/modal';
   styleUrls: ['./success-modal.component.scss']
 })
 export class SuccessModalComponent {
+	mensagens!: string[];
 	constructor(public modalRef: BsModalRef){}
-	cancelar() {
+	voltar() {
 		this.modalRef.hide();
 	}
 }

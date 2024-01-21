@@ -1,4 +1,10 @@
-.btn-success{
- background-color: #9059d3;
- border-color: #7a4bb3;
+.btn-success {
+	background-color: #9059d3;
+	border-color: #7a4bb3;
+	--bs-btn-bg: #7a4bb3;
+	--bs-btn-hover-bg: #7a4bb3;
+	--bs-btn-active-bg: #7a4bb3;
+	--bs-btn-hover-border-color: #7a4bb3;
+	--bs-btn-border-color: #7a4bb3;
+	--bs-btn-active-border-color: #7a4bb3;
 }

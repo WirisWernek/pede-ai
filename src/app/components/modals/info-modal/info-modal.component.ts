@@ -7,8 +7,10 @@ import { BsModalRef } from 'ngx-bootstrap/modal';
   styleUrls: ['./info-modal.component.scss']
 })
 export class InfoModalComponent {
+	alertas!: string[];
+
 	constructor(public modalRef: BsModalRef){}
-	cancelar() {
+	continuar() {
 		this.modalRef.hide();
 	}
 }
