@@ -1,0 +1,65 @@
+<div class="modal-content">
+	<div class="modal-header justify-content-center">
+		<h1 class="modal-title fs-5" id="exampleModalLabel">Finalize Seu Pedido</h1>
+	</div>
+	<div class="modal-body">
+		<form [formGroup]="form">
+			<div class="form-floating mb-3">
+				<input type="text" [ngClass]=" ruaValida ? 'form-control' : 'form-control is-invalid'" id="ruaInput" placeholder="Rua Adamastor Brandão" name="rua" formControlName="rua" (blur)="validateRua()">
+				<label *ngIf="ruaValida" for="ruaInput">Rua</label>
+				<ng-container *ngIf="!ruaValida">
+					<label for="ruaInput" class="form-label text-danger">É necessário informar a rua para a entrega!</label>
+				</ng-container>
+			</div>
+			<div *ngIf="!form.controls['semNumero'].value" class="form-floating mb-3">
+				<input type="text" [ngClass]=" numeroValido ? 'form-control' : 'form-control is-invalid'" id="numeroInput" placeholder="Número da Casa" name="numero" formControlName="numero" (blur)="validateNumero()">
+				<label *ngIf="numeroValido" class="labelNumero" for="numeroInput">Número</label>
+				<ng-container *ngIf="!numeroValido">
+					<label for="ruaInput" class="form-label text-danger">É necessário informar o numero da casa!</label>
+				</ng-container>
+			</div>
+
+			<div class="form-check mb-3">
+				<input class="form-check-input" type="checkbox" id="semNumero" name="semNumero" formControlName="semNumero" (blur)="validateNumero()">
+				<label class="form-check-label" for="semNumero">Sem Número</label>
+			</div>	
+
+			<div class="form-floating mb-3">
+				<textarea [ngClass]=" referenciaValida ? 'form-control' : 'form-control is-invalid'" placeholder="Diga um ponto de referencia de onde você mora" id="referenciaInput" name="referencia" formControlName="referencia" (blur)="validateReferencia()"></textarea>
+				<label *ngIf="referenciaValida" for="referenciaInput">Referência</label>
+				<ng-container *ngIf="!referenciaValida">
+					<label for="ruaInput" class="form-label text-danger">É necessário informar uma de referência!</label>
+				</ng-container>
+			</div>
+
+			<div>
+				<label *ngIf="pagamentoValido" for="formaPagamento" class="form-label">Forma de Pagamento</label>
+				<ng-container *ngIf="!pagamentoValido">
+					<label for="ruaInput" class="form-label text-danger">É necessário informar uma forma de pagamento!</label>
+				</ng-container>
+				<select [ngClass]=" pagamentoValido ? 'form-select mb-3' : 'form-select mb-3 is-invalid'" aria-label="Default select example" id="formaPagamento" name="formaPagamento" formControlName="formaPagamento" (blur)="validateFormaPagamento()">
+					<option value="" selected>Selecione uma opção</option>
+					<option value="CARTAO">Cartão</option>
+					<option value="DINHEIRO">Dinheiro</option>
+					<option value="PIX">Pix</option>
+				</select>
+			</div>
+
+			<div class="form-check mb-3" *ngIf="form.controls['formaPagamento'].value === 'PIX'">
+				<input class="form-check-input" type="checkbox" id="precisaChavePix" name="precisaChavePix" formControlName="precisaChavePix">
+				<label class="form-check-label" for="precisaChavePix">Precisa da Chave do Pix?</label>
+			</div>
+
+			<div class="form-check mb-3" *ngIf="form.controls['formaPagamento'].value === 'DINHEIRO'">
+				<input class="form-check-input" type="checkbox" id="precisaTroco" name="precisaTroco" formControlName="precisaTroco">
+				<label class="form-check-label" for="precisaTroco">Precisa de Troco?</label>
+			</div>
+		</form>
+	</div>
+	<div class="modal-footer justify-content-center">
+		<button type="button" class="btn btn-danger" data-bs-dismiss="modal" (click)="cancelar()">
+			Cancelar
+		</button>
+		<button type="button" class="btn btn-primary" (click)="continuar()">Continuar</button>
+	</div>
+</div>

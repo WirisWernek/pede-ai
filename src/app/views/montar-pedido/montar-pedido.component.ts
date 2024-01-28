@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
+import { BsModalRef, BsModalService } from 'ngx-bootstrap/modal';
 import { ItensPedido } from 'src/app/models/itens-pedido.model';
 import { AlertService } from 'src/app/services/alert.service';
 import { PedidoService } from 'src/app/services/pedido.service';
 import { ValidatePedidoService } from 'src/app/services/validate-pedido.service';
-import { WhatsappService } from 'src/app/services/whatsapp.service';
+import { FinalizarPedidoComponent } from './modals/finalizar-pedido/finalizar-pedido.component';
 
 @Component({
 	selector: 'app-montar-pedido',
@@ -13,19 +14,25 @@ import { WhatsappService } from 'src/app/services/whatsapp.service';
 export class MontarPedidoComponent {
 	itensPedido: ItensPedido = new ItensPedido();
 	textoPedido = '';
+	bsModalRef?: BsModalRef;
 
 	constructor(
 		private alertService: AlertService,
 		private pedidoService: PedidoService,
 		private validatePedidoService: ValidatePedidoService,
-		private whatsappService: WhatsappService
+		private modalService: BsModalService
 	) {}
 
 	pedir() {
-		if(this.montarDadosPedido()){
-			const link = this.whatsappService.carregarLinkWhatsApp(this.textoPedido);
-			console.log(link);
-			this.whatsappService.pedir(link);
+		if (this.montarDadosPedido()) {
+			this.bsModalRef = this.modalService.show(FinalizarPedidoComponent, {
+				class: 'modal modal-dialog-centered',
+				ignoreBackdropClick: true,
+				backdrop: true,
+				keyboard: true,
+				animated: true,
+				initialState: { textoPedido: this.textoPedido },
+			});
 		}
 	}
 

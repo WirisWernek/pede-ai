@@ -33,9 +33,4 @@ export class ItensPedido {
   adicional_gotas_de_chocolate = false;
   adicional_chocoball_power = false;
   adicional_ovomaltine = false;
-
-  // complemento: string[];
-  // coberturas: string[];
-  //frutas: string[];
-  //adicionais: string[];
 }
