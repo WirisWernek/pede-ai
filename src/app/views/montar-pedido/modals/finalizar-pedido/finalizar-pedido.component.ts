@@ -97,5 +97,3 @@ export class FinalizarPedidoComponent {
 		this.pagamentoValido = true;
 	}
 }
-
-// [ngClass]=" emailCopiaValido ? 'form-control' : 'form-control is-invalid'"
