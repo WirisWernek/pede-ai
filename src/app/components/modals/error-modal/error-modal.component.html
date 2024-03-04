@@ -6,7 +6,9 @@
 		</svg>
 		<h3 class="mt-2 mb-3">Erro</h3>
 		<ul>
-			<li *ngFor="let item of erros">{{ item }}</li>
+			@for (item of erros; track $index) {
+				<li>{{ item }}</li>
+			}
 		</ul>
 		<button type="button" class="btn btn-danger my-3" (click)="voltar()">Voltar</button>
 	</div>

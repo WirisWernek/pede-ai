@@ -62,10 +62,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "pedeai:build:production"
+              "buildTarget": "pedeai:build:production"
             },
             "development": {
-              "browserTarget": "pedeai:build:development"
+              "buildTarget": "pedeai:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -73,7 +73,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "pedeai:build"
+            "buildTarget": "pedeai:build"
           }
         },
         "test": {
