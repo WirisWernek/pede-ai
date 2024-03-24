@@ -4,48 +4,11 @@ import { ItensPedido } from '../models/itens-pedido.model';
 @Injectable()
 export class ValidatePedidoService {
 	validarTipo(pedido: ItensPedido) {
-		let valido= false;
-
-		switch (pedido.tipo) {
-			case 'natural':
-				valido = true;
-				break;
-			case 'zero':
-				valido = true;
-				break;
-			default:
-				valido = false;
-				break;
-		}
-		return valido;
+		return ['natural','zero'].includes(pedido.tipo);
 	}
+	
 	validarTamanho(pedido: ItensPedido) {
-		let valido = false;
-
-		switch (pedido.tamanho) {
-			case '300ml':
-				valido = true;
-				break;
-			case '500ml':
-				valido = true;
-				break;
-			case '710ml':
-				valido = true;
-				break;
-			case '1l':
-				valido = true;
-				break;
-			case 'barca':
-				valido = true;
-				break;
-			case 'roleta':
-				valido = true;
-				break;
-			default:
-				valido = false;
-				break;
-		}
-		return valido;
+		return ['300ml', '500ml', '710ml','1l', 'barca','roleta'].includes(pedido.tamanho);
 	}
 
 	validarComplementos(pedido: ItensPedido) {
