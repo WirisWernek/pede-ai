@@ -1,0 +1,15 @@
+<app-navbar title="Carrinho"></app-navbar>
+<div class="d-flex justify-content-center align-items-center flex-column mt-5">
+	<h2 class="text-center fs-5 mt-5">Seus Pedidos</h2>
+	<section class="mt-2">
+		<ul class="list-group" id="tipo">
+			<li
+				class="list-group-item d-flex justify-content-between"
+				*ngFor="let item of itens$ | async"
+			>
+				<span>{{ item.nome }} - {{ item.tamanho }}</span>
+				<span>R$ 15,99</span>
+			</li>
+		</ul>
+	</section>
+</div>

@@ -11,11 +11,13 @@ import { ModalModule } from 'ngx-bootstrap/modal';
 import { ErrorModalComponent } from './components/modals/error-modal/error-modal.component';
 import { InfoModalComponent } from './components/modals/info-modal/info-modal.component';
 import { SuccessModalComponent } from './components/modals/success-modal/success-modal.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
 import { AlertService } from './services/alert.service';
 import { FinalizarPedidoService } from './services/finalizar-pedido.service';
 import { PedidoService } from './services/pedido.service';
 import { ValidatePedidoService } from './services/validate-pedido.service';
 import { WhatsappService } from './services/whatsapp.service';
+import { CarrinhoComponent } from './views/carrinho/carrinho.component';
 import { FinalizarPedidoComponent } from './views/montar-pedido/modals/finalizar-pedido/finalizar-pedido.component';
 import { MontarPedidoComponent } from './views/montar-pedido/montar-pedido.component';
 
@@ -27,6 +29,8 @@ import { MontarPedidoComponent } from './views/montar-pedido/montar-pedido.compo
 		InfoModalComponent,
 		SuccessModalComponent,
 		FinalizarPedidoComponent,
+		NavbarComponent,
+		CarrinhoComponent
 	],
 	imports: [
 		BrowserModule,
