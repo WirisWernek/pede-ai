@@ -1,7 +1,8 @@
-<h1 class="text-center fs-1">Açaí</h1>
-<div class="d-flex justify-content-center align-items-center">
-	<form action="">
-		<section class="mt-5">
+<app-navbar title="Açaí"></app-navbar>
+<div class="d-flex flex-column justify-content-center align-items-center mt-5">
+	<h2 class="text-center fs-5 mt-5">Monte seu Pedido</h2>
+	<form class="mt-2">
+		<section>
 			<label for="tipo" class="mb-1 fs-4">Tipo</label>
 			<div id="tipo">
 				<div class="form-check">
@@ -256,8 +257,19 @@
 					</div>
 				</div>
 		</section>
+		<section class="mt-5">
+			<div class="mb-3">
+				<label for="inputNome" class="form-label">Nome</label>
+				<input type="text" [(ngModel)]="itensPedido.nome" name="nome" class="form-control" id="inputNome" placeholder="Valdemar da Silva">
+			  </div>
+			  <div class="mb-3">
+				<label for="inputObservacao" class="form-label">Observações</label>
+				<textarea class="form-control" [(ngModel)]="itensPedido.observacao" name="observacao" id="inputObservacao" rows="5" placeholder="Manera no leite em pó"></textarea>
+			  </div>			
+		</section>
 		<section class="my-5 d-flex justify-content-center align-items-center">
-			<button type="button" class="btn btn-success" (click)="pedir()">Pedir</button>
+			<!-- <button type="button" class="btn btn-success" (click)="pedir()">Pedir</button> -->
+			<button type="button" class="btn btn-success" (click)="adicionarPedido()">Adicionar ao Carrinho</button>
 		</section>
 	</form>
 

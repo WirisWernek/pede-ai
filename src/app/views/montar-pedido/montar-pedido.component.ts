@@ -1,7 +1,9 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { BsModalRef, BsModalService } from 'ngx-bootstrap/modal';
 import { ItensPedido } from 'src/app/models/itens-pedido.model';
 import { AlertService } from 'src/app/services/alert.service';
+import { ItemService } from 'src/app/services/item.service';
 import { PedidoService } from 'src/app/services/pedido.service';
 import { ValidatePedidoService } from 'src/app/services/validate-pedido.service';
 import { FinalizarPedidoComponent } from './modals/finalizar-pedido/finalizar-pedido.component';
@@ -20,8 +22,20 @@ export class MontarPedidoComponent {
 		private alertService: AlertService,
 		private pedidoService: PedidoService,
 		private validatePedidoService: ValidatePedidoService,
-		private modalService: BsModalService
+		private modalService: BsModalService,
+		private itemService: ItemService,
+		private router: Router
 	) {}
+
+	goCart() {
+		this.router.navigateByUrl("carrinho");
+	}
+
+	adicionarPedido() {
+		if (this.montarDadosPedido()) {
+			this.itemService.salvar(this.itensPedido);
+		}
+	}
 
 	pedir() {
 		if (this.montarDadosPedido()) {
