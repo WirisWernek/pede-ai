@@ -8,8 +8,8 @@ describe('ErrorModalComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [ErrorModalComponent]
-    });
+    imports: [ErrorModalComponent]
+});
     fixture = TestBed.createComponent(ErrorModalComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();

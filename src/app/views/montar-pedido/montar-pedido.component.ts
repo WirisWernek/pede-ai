@@ -5,11 +5,14 @@ import { AlertService } from 'src/app/services/alert.service';
 import { PedidoService } from 'src/app/services/pedido.service';
 import { ValidatePedidoService } from 'src/app/services/validate-pedido.service';
 import { FinalizarPedidoComponent } from './modals/finalizar-pedido/finalizar-pedido.component';
+import { FormsModule } from '@angular/forms';
 
 @Component({
-	selector: 'app-montar-pedido',
-	templateUrl: './montar-pedido.component.html',
-	styleUrls: ['./montar-pedido.component.scss'],
+    selector: 'app-montar-pedido',
+    templateUrl: './montar-pedido.component.html',
+    styleUrls: ['./montar-pedido.component.scss'],
+    standalone: true,
+    imports: [FormsModule],
 })
 export class MontarPedidoComponent {
 	itensPedido: ItensPedido = new ItensPedido();

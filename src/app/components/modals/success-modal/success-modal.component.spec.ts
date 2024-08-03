@@ -8,8 +8,8 @@ describe('SuccessModalComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [SuccessModalComponent]
-    });
+    imports: [SuccessModalComponent]
+});
     fixture = TestBed.createComponent(SuccessModalComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
