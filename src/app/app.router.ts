@@ -1,10 +1,12 @@
 import { Routes } from '@angular/router';
-import { MontarPedidoComponent } from './views/montar-pedido/montar-pedido.component';
 
 export const routes: Routes = [
 	{
 		path: 'acai',
-		component: MontarPedidoComponent,
+		loadComponent: () =>
+			import('./views/montar-pedido/montar-pedido.component').then(
+				(c) => c.MontarPedidoComponent
+			),
 	},
 	{
 		path: '',
