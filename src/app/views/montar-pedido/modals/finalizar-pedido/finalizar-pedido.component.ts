@@ -1,13 +1,20 @@
 import { Component } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BsModalRef } from 'ngx-bootstrap/modal';
 import { FinalizarPedidoModel } from 'src/app/models/finalizar-pedido.model';
 import { FinalizarPedidoService } from 'src/app/services/finalizar-pedido.service';
+import { NgClass } from '@angular/common';
 
 @Component({
-	selector: 'app-finalizar-pedido',
-	templateUrl: './finalizar-pedido.component.html',
-	styleUrls: ['./finalizar-pedido.component.scss'],
+    selector: 'app-finalizar-pedido',
+    templateUrl: './finalizar-pedido.component.html',
+    styleUrls: ['./finalizar-pedido.component.scss'],
+    standalone: true,
+    imports: [
+        FormsModule,
+        ReactiveFormsModule,
+        NgClass,
+    ],
 })
 export class FinalizarPedidoComponent {
 	textoPedido!: string;
